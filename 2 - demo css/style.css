@@ -41,6 +41,16 @@ nav a + a {
     margin-left: 20px;
 }
 
+@media screen and (max-width: 600px) {
+    h1 {
+        text-align: center;
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+}
+
 main {
     padding: 45px;
     background-color: rgb(250, 250, 250);
