@@ -1,3 +1,6 @@
+/**
+ * Auto-reload script used during the demo.
+ */
 let last = {},
     files = [
         window.location.href,
