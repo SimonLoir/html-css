@@ -1,54 +1,74 @@
 body,
 html {
+    /*
+    On retire les marges et les paddings pour que le body prenne toute la page
+    */
     padding: 0;
     margin: 0;
+    /*
+    On change la police de caractère
+    */
     font-family: sans-serif;
 }
 
 header {
+    /*
+    Utiliser une hauteur de ligne de 85px nous permet de créer une barre de navigation d'une hauteur de 85px
+    dont les éléments sont centrés verticalement
+    */
     line-height: 85px;
+
+    /*
+    La propriété de padding peut être utilisée de plusieurs façons
+    Ici, nous montrons quelques façons équivalentes d'utiliser le padding (le même raisonnement s'applique pour le margin)
+    */
+
     /*padding: top right bottom left */
     padding: 0px 45px 0px 45px;
     /* <=> padding-left: 45px; padding-right: 45px; */
+
     background: rgb(34, 34, 34);
     color: white;
 }
 
 h1 {
+    /*
+    Certains éléments ont des marges et des paddings par défaut. 
+    Il faut parfois les supprimer pour éviter certains problèmes dans le design */
     padding: 0;
     margin: 0;
 }
 
-/* le style s'applique au titres de niveau 1 (h1) et au nav */
+/* le style s'applique aux titres de niveau 1 (h1) et au nav */
 h1,
 nav {
     display: inline-block;
+    /* Permet de centrer les éléments verticalement les uns par rapport aux autres */
     vertical-align: middle;
 }
 
 /* ce style ne s'applique qu'au nav */
 nav {
+    /* le float peut être difficile à gérer mais dans ce cas-ci, 
+    son utilisation ne pose pas de souci. Il sert à mettre le nav à droite */
     float: right;
 }
 
+/* Ici, on sélectionne tous les liens qui sont dans un élément nav. Les autres ne sont pas pris en compte */
 nav a {
     color: rgb(211, 211, 211);
+
+    /* On retire la ligne qui indique qu'il s'agit d'un lien */
     text-decoration: none;
-    font-weight: bold;
+
+    /* On donne l'épaisseur de texte. Ici, on met le texte en gras */
+    font-weight: bold; /* on peut aussi utiliser des nombres pour plus de précision concernant l'épaisseur */
 }
 
+/* Un sélecteur assez complexe qui nous permet de sélectionner 
+tous les liens se trouvant dans un nav et qui ont un autre lien avant eux */
 nav a + a {
     margin-left: 20px;
-}
-
-@media screen and (max-width: 600px) {
-    h1 {
-        text-align: center;
-        display: block;
-    }
-    nav {
-        display: none;
-    }
 }
 
 main {
@@ -57,20 +77,26 @@ main {
 }
 
 p {
+    /* la hauteur de ligne est 1.8 fois la hauteur du texte
+    => meilleur pour l'accessibilité, c'est plus facile à lire */
     line-height: 1.8;
 }
 
 button {
+    /* Encore une autre utilisation du padding avec padding: top-bottom right-left; */
     padding: 8px 15px;
     border-radius: 8px;
     font-size: 15px;
+    /* on retire la bordure par défaut des boutons */
     border: none;
     /*box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);*/
     background-color: rgb(54, 54, 54);
     color: white;
+    /* On met le curseur sous forme de main pour montrer que le bouton est cliquable */
     cursor: pointer;
 }
 
+/* Utilisation plus simple du sélecteur "+" où on ne sélectionne que les boutons qui suivent directement un lien */
 a + button {
     margin-left: 25px;
 }

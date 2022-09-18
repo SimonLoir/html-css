@@ -5,20 +5,38 @@ body {
     font-family: sans-serif;
 }
 
+/*
+Style sur les éléments qui ont la classe "box"
+*/
 .box {
+    /* On donne une longueur et une largeur de 200px pour faire un carré */
     width: 200px;
     height: 200px;
+    /* On donne une couleur de fond et on utilise rgb 
+    pour donner des valeur de rouge, vert et bleu pour créer la couleur */
     background-color: rgb(230, 227, 227);
     margin: 10px;
+    /* line-height nous permet de centrer le texte  verticalement */
     line-height: 200px;
+    /* ensuite, on le centre horizontalement */
     text-align: center;
+    /* On veut du display block pour pouvoir donner une hauteur et une largeur mais
+    on veut aussi du inline pour qu'ils s'affichent à la suite sans retour à la ligne */
     display: inline-block;
 }
 
+/*
+Style sur les éléments qui ont la classe "circle"
+*/
 .circle {
+    /* Utiliser un border-radius de 50% nous permet de créer un cercle
+    si l'élément est un carré */
     border-radius: 50%;
 }
 
+/*
+Style sur un élément qui a l'ID "red"
+*/
 #red {
     background-color: crimson;
     color: white;
